@@ -16,17 +16,28 @@
     <div class="filters">
       <input type="date" id="startDate" />
       <input type="date" id="endDate" />
-      <button>Get Space Images</button>
+      <button id = "GetImages">Get Space Images</button>
     </div>
 
     <div id="gallery" class="gallery">
       <div class="placeholder">
-        <div class="placeholder-icon">🔭</div>
+        <img src="img/NASA-Logo-Large.jpg" alt="NASA Large Logo" class="logo" />
         <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
       </div>
     </div>
   </div>
 
+  <div id="imageModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button id="closeModal" class="close-modal" aria-label="Close image preview">X</button>
+      <img id="modalImage" src="" alt="Larger space image preview" />
+      <h2 id="modalTitle"></h2>
+      <p id="modalDate"></p>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script src="js/secrets.js"></script>
   <script src="js/dateRange.js"></script>
   <script src="js/script.js"></script>
 </body>

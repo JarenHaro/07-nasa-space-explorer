@@ -8,7 +8,7 @@
 /* Base page styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   padding: 20px;
 }
 
@@ -26,6 +26,8 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  background-color: #c7c7c7;
+  border-radius: 8px;
 }
 
 h1 {
@@ -38,6 +40,7 @@ h1 {
 .logo {
   width: 140px;
   margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 /* Date‐picker & button row */
@@ -108,6 +111,7 @@ button:hover {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 /* Three columns on wider screens */
@@ -128,6 +132,76 @@ button:hover {
   margin-top: 10px;
   padding: 5px;
   font-size: 14px;
+}
+
+.gallery-item:focus {
+  outline: 3px solid #3f6cb5;
+  outline-offset: 2px;
+}
+
+/* Modal overlay and content */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.close-modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #d3d3d3;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background: #bfbfbf;
+}
+
+#modalTitle {
+  margin-bottom: 6px;
+}
+
+#modalDate {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+#modalDescription {
+  line-height: 1.5;
 }
 
 /* Placeholder content */
